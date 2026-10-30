@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10100f" />
+    <title>@ViewData["Title"] - CineVerse</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/cinema.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" asp-area="Customer" asp-controller="Home" asp-action="Index"><span class="brand-mark">✦</span><span>CineVerse<small>YOUR CINEMA CLUB</small></span></a>
+        <nav aria-label="Main navigation">
+            <a asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-area="Customer" asp-controller="Movies" asp-action="Index">Movies</a>
+        </nav>
+        <a class="header-cta" asp-area="Customer" asp-controller="Movies" asp-action="Index">Find a Movie <span>↗</span></a>
+    </header>
+    <main>@RenderBody()</main>
+    <footer class="site-footer"><a class="brand" asp-area="Customer" asp-controller="Home" asp-action="Index"><span class="brand-mark">✦</span><span>CineVerse<small>YOUR CINEMA CLUB</small></span></a><span>Every story feels bigger on the big screen.</span><a asp-area="Customer" asp-controller="Movies" asp-action="Index">Explore Movies ↑</a></footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
